@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubSync - Gizlilik Politikası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 56px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #1e1e1e;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 14px;
+            margin-bottom: 20px;
+        }
+
+        .logo svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p.subtitle {
+            font-size: 15px;
+            color: #888;
+        }
+
+        .effective-date {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 14px;
+            background-color: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #a78bfa;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 16px;
+            padding-left: 14px;
+            border-left: 3px solid #6366f1;
+        }
+
+        section p {
+            font-size: 15px;
+            color: #b0b0b0;
+            margin-bottom: 12px;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+
+        section ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #b0b0b0;
+        }
+
+        section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background-color: #6366f1;
+            border-radius: 50%;
+        }
+
+        .info-card {
+            background-color: #111118;
+            border: 1px solid #1e1e2e;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        .info-card p,
+        .info-card ul li {
+            font-size: 14px;
+            color: #999;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #1e1e1e;
+        }
+
+        table th {
+            color: #a78bfa;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        table td {
+            color: #b0b0b0;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #1a1a2e, #16162a);
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            color: #c4b5fd;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid #1e1e1e;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 16px 60px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+
+            table th,
+            table td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+            </div>
+            <h1>Gizlilik Politikası</h1>
+            <p class="subtitle">SubSync — Abonelik Takip Uygulaması</p>
+            <span class="effective-date">Yürürlük Tarihi: 24 Mart 2026</span>
+        </div>
+
+        <section>
+            <h2>Giriş</h2>
+            <p>
+                SubSync olarak, gizliliğinize saygı duyuyoruz. Bu gizlilik politikası, SubSync mobil uygulamasını
+                kullanırken hangi kişisel verilerinizi topladığımızı, nasıl kullandığımızı, sakladığımızı ve
+                koruduğumuzu açıklamaktadır.
+            </p>
+            <p>
+                Uygulamayı kullanarak bu politikada belirtilen veri işleme uygulamalarını kabul etmiş olursunuz.
+            </p>
+        </section>
+
+        <section>
+            <h2>Topladığımız Veriler</h2>
+
+            <div class="info-card">
+                <h3>Hesap Bilgileri</h3>
+                <ul>
+                    <li>E-posta adresi</li>
+                    <li>Ad ve soyad (isteğe bağlı)</li>
+                    <li>Şifre (şifrelenmiş olarak saklanır)</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Abonelik Verileri</h3>
+                <ul>
+                    <li>Abonelik adı ve kategorisi</li>
+                    <li>Ücret, para birimi ve faturalama döngüsü</li>
+                    <li>Başlangıç tarihi ve sonraki faturalama tarihi</li>
+                    <li>Abonelik durumu (aktif, duraklatılmış, iptal edilmiş, deneme)</li>
+                    <li>Notlar, ödeme yöntemi, hesap e-postası ve kullanıcı adı (isteğe bağlı)</li>
+                    <li>Hatırlatıcı tercihleri</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Otomatik Olarak Toplanan Veriler</h3>
+                <ul>
+                    <li>Cihaz bildirim tokenleri (hatırlatıcılar için)</li>
+                    <li>Uygulama kullanım zaman damgaları</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Verilerin Kullanım Amaçları</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Veri</th>
+                        <th>Amaç</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E-posta adresi</td>
+                        <td>Hesap oluşturma, doğrulama ve iletişim</td>
+                    </tr>
+                    <tr>
+                        <td>Şifre</td>
+                        <td>Hesap güvenliği ve kimlik doğrulama</td>
+                    </tr>
+                    <tr>
+                        <td>Abonelik bilgileri</td>
+                        <td>Aboneliklerinizi takip etme ve harcama analizi</td>
+                    </tr>
+                    <tr>
+                        <td>Bildirim tokenleri</td>
+                        <td>Yenileme hatırlatıcıları gönderme</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Üçüncü Taraf Hizmetler</h2>
+            <p>Uygulamamız aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
+
+            <div class="info-card">
+                <h3>Resend</h3>
+                <p>E-posta doğrulama mesajlarının gönderilmesi için kullanılır. Yalnızca e-posta adresiniz bu hizmetle paylaşılır.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Frankfurter API</h3>
+                <p>Gerçek zamanlı döviz kuru dönüşümleri için kullanılır. Bu hizmetle kişisel veri paylaşılmaz.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Expo Push Notifications</h3>
+                <p>Abonelik yenileme hatırlatıcıları göndermek için kullanılır. Cihaz bildirim tokenleri bu hizmetle paylaşılır.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Veri Güvenliği</h2>
+            <p>Verilerinizi korumak için aşağıdaki güvenlik önlemlerini uyguluyoruz:</p>
+            <ul>
+                <li>Şifreler BCrypt algoritması ile hashlenerek saklanır, düz metin olarak asla depolanmaz</li>
+                <li>API iletişimleri JWT (JSON Web Token) tabanlı kimlik doğrulama ile korunur</li>
+                <li>E-posta doğrulama tokenleri 15 dakika sonra geçerliliğini yitirir</li>
+                <li>Verileriniz güvenli PostgreSQL veritabanında saklanır</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Veri Saklama ve Silme</h2>
+            <p>
+                Verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde,
+                tüm kişisel verileriniz ve abonelik kayıtlarınız kalıcı olarak silinir (kaskad silme).
+            </p>
+            <div class="highlight-box">
+                <p>
+                    Hesabınızın ve tüm ilişkili verilerin silinmesini talep etmek için
+                    aşağıdaki iletişim adresimize başvurabilirsiniz.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Yerel Veri Depolama</h2>
+            <p>
+                Uygulama, performansı artırmak ve çevrimdışı erişim sağlamak amacıyla cihazınızda
+                AsyncStorage kullanarak bazı verileri yerel olarak saklar. Bu veriler yalnızca
+                cihazınızda tutulur ve uygulama kaldırıldığında silinir.
+            </p>
+        </section>
+
+        <section>
+            <h2>Çocukların Gizliliği</h2>
+            <p>
+                SubSync, 13 yaşın altındaki çocuklara yönelik değildir. Bilerek 13 yaşın altındaki
+                çocuklardan kişisel veri toplamıyoruz. Eğer bir çocuğun bize kişisel veri sağladığını
+                fark ederseniz, lütfen bizimle iletişime geçin; ilgili verileri derhal sileceğiz.
+            </p>
+        </section>
+
+        <section>
+            <h2>Politika Değişiklikleri</h2>
+            <p>
+                Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler yapıldığında,
+                güncellenmiş politikayı bu sayfada yayınlayacağız ve yürürlük tarihini değiştireceğiz.
+                Önemli değişiklikler için uygulama içi bildirim gönderebiliriz.
+            </p>
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2026 SubSync. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+</body>
+</html>
