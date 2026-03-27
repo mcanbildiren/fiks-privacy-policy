@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubSync - Veri Silme Talebi</title>
+    <title>fiks - Veri Silme Talebi</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
+            background-color: #F2F2F2;
+            color: #333333;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             min-height: 100vh;
@@ -36,38 +36,31 @@
         }
 
         .logo {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 14px;
             margin-bottom: 20px;
         }
 
         .logo svg {
-            width: 28px;
-            height: 28px;
-            fill: #fff;
+            width: 56px;
+            height: 56px;
+            fill: #F2784B;
         }
 
         .header h1 {
             font-size: 28px;
             font-weight: 700;
-            color: #ffffff;
+            color: #222;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
 
         .header p {
             font-size: 15px;
-            color: #888;
+            color: #777;
         }
 
         .card {
-            background-color: #111118;
-            border: 1px solid #1e1e2e;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
             border-radius: 16px;
             padding: 32px;
             margin-bottom: 24px;
@@ -75,7 +68,7 @@
 
         .card p {
             font-size: 15px;
-            color: #b0b0b0;
+            color: #555;
             margin-bottom: 16px;
         }
 
@@ -84,8 +77,8 @@
         }
 
         .contact-box {
-            background: linear-gradient(135deg, #1a1a2e, #16162a);
-            border: 1px solid #2a2a4a;
+            background: linear-gradient(135deg, #fef3e2, #fdebd0);
+            border: 1px solid #F2BA52;
             border-radius: 12px;
             padding: 24px;
             text-align: center;
@@ -102,7 +95,7 @@
         .contact-box a {
             font-size: 18px;
             font-weight: 600;
-            color: #a78bfa;
+            color: #F29C50;
             text-decoration: none;
         }
 
@@ -121,7 +114,7 @@
             padding-left: 40px;
             margin-bottom: 16px;
             font-size: 15px;
-            color: #b0b0b0;
+            color: #555;
         }
 
         .steps li::before {
@@ -132,15 +125,15 @@
             top: 0;
             width: 26px;
             height: 26px;
-            background-color: #1a1a2e;
-            border: 1px solid #2a2a4a;
+            background-color: #fff;
+            border: 1px solid #F2BA52;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 13px;
             font-weight: 600;
-            color: #a78bfa;
+            color: #F29C50;
             text-align: center;
             line-height: 26px;
         }
@@ -156,7 +149,7 @@
         }
 
         .footer a {
-            color: #6366f1;
+            color: #3D79F2;
             text-decoration: none;
         }
 
@@ -171,15 +164,15 @@
         section h2 {
             font-size: 18px;
             font-weight: 600;
-            color: #ffffff;
+            color: #222;
             margin-bottom: 14px;
             padding-left: 14px;
-            border-left: 3px solid #6366f1;
+            border-left: 3px solid #3D79F2;
         }
 
         section p {
             font-size: 15px;
-            color: #b0b0b0;
+            color: #555;
             margin-bottom: 12px;
         }
 
@@ -194,11 +187,11 @@
         .data-table td {
             text-align: left;
             padding: 12px 16px;
-            border-bottom: 1px solid #1e1e2e;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .data-table th {
-            color: #a78bfa;
+            color: #F29C50;
             font-weight: 600;
             font-size: 13px;
             text-transform: uppercase;
@@ -206,7 +199,7 @@
         }
 
         .data-table td {
-            color: #b0b0b0;
+            color: #555;
         }
 
         .data-table tr:last-child td {
@@ -222,20 +215,20 @@
         }
 
         .badge-delete {
-            background-color: #1a0a0a;
-            border: 1px solid #4a1a1a;
-            color: #f87171;
+            background-color: #fef2f2;
+            border: 1px solid #fca5a5;
+            color: #dc2626;
         }
 
         .badge-retain {
-            background-color: #0a1a0a;
-            border: 1px solid #1a4a1a;
-            color: #4ade80;
+            background-color: #f0fdf4;
+            border: 1px solid #86efac;
+            color: #16a34a;
         }
 
         .retention-note {
-            background-color: #111118;
-            border: 1px solid #1e1e2e;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
             padding: 16px 20px;
             margin-top: 12px;
@@ -243,7 +236,7 @@
 
         .retention-note p {
             font-size: 14px;
-            color: #999;
+            color: #666;
             margin-bottom: 0;
         }
 
@@ -267,28 +260,28 @@
         <div class="header">
             <div class="logo">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    <path d="M21.254 17.528A4.165 4.165 0 0 0 17.094 14a4.22 4.22 0 0 0-3.685 2.137 1.717 1.717 0 0 0-.534-.092 1.67 1.67 0 0 0-1.556 1.04A2.996 2.996 0 0 0 12 23h8.018A2.918 2.918 0 0 0 23 20.136a2.858 2.858 0 0 0-1.746-2.608zM19.994 22h-7.54l-.46-.003a1.995 1.995 0 0 1-.448-3.938l.506-.118.195-.481a.67.67 0 0 1 .628-.415.734.734 0 0 1 .225.043l.777.252.402-.711A3.231 3.231 0 0 1 17.094 15a3.18 3.18 0 0 1 3.17 2.67l.08.552.51.223A1.863 1.863 0 0 1 22 20.137 1.916 1.916 0 0 1 19.995 22zM11.5 2C6.78 2 2 3.03 2 5v12.58c0 1.64 2.676 2.695 6 3.123v-1.006c-3.16-.426-5-1.381-5-2.118v-6.248C4.643 12.429 8.082 13 11.5 13s6.857-.57 8.5-1.67v2.568a5.22 5.22 0 0 1 1 .856V5c0-1.97-4.78-3-9.5-3zM20 9.848C20 10.726 16.689 12 11.5 12S3 10.726 3 9.848V6.41C4.643 7.457 8.082 8 11.5 8s6.857-.543 8.5-1.589zM11.5 7C6 7 3 5.679 3 5s3-2 8.5-2S20 4.321 20 5s-3 2-8.5 2z"/>
                 </svg>
             </div>
             <h1>Veri Silme Talebi</h1>
-            <p>SubSync — Abonelik Takip Uygulaması</p>
+            <p>fiks — Abonelik Takip Uygulaması</p>
         </div>
 
         <div class="card">
             <p>
-                <strong>SubSync</strong> uygulamasının geliştiricisi olarak kullanıcılarımızın
-                gizliliğine saygı duyuyoruz. Bu sayfa, SubSync hesabınıza ait kişisel verilerinizin
+                <strong>fiks</strong> uygulamasının geliştiricisi olarak kullanıcılarımızın
+                gizliliğine saygı duyuyoruz. Bu sayfa, fiks hesabınıza ait kişisel verilerinizin
                 silinmesini nasıl talep edebileceğinizi açıklamaktadır.
             </p>
         </div>
 
         <section>
             <h2>Hesap Silme Adımları</h2>
-            <p>SubSync hesabınızı ve ilişkili tüm verilerinizi silmek için aşağıdaki adımları izleyin:</p>
+            <p>fiks hesabınızı ve ilişkili tüm verilerinizi silmek için aşağıdaki adımları izleyin:</p>
             <ol class="steps">
-                <li>SubSync hesabınıza kayıtlı e-posta adresinizden <strong>karpazsoft@gmail.com</strong> adresine bir e-posta gönderin.</li>
+                <li>fiks hesabınıza kayıtlı e-posta adresinizden <strong>karpazsoft@gmail.com</strong> adresine bir e-posta gönderin.</li>
                 <li>E-posta konu satırına <strong>"Hesap ve Veri Silme Talebi"</strong> yazın.</li>
-                <li>E-posta içeriğinde SubSync hesabınıza kayıtlı e-posta adresinizi belirtin.</li>
+                <li>E-posta içeriğinde fiks hesabınıza kayıtlı e-posta adresinizi belirtin.</li>
                 <li>Talebiniz en geç <strong>30 gün</strong> içinde işleme alınacaktır.</li>
                 <li>İşlem tamamlandığında, silme onayı e-posta ile tarafınıza bildirilecektir.</li>
             </ol>
@@ -368,7 +361,7 @@
         </section>
 
         <div class="footer">
-            <p>&copy; 2026 SubSync. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 fiks. Tüm hakları saklıdır.</p>
             <p><a href="privacy-policy.html">Gizlilik Politikası</a></p>
         </div>
     </div>
